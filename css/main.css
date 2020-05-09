@@ -1,7 +1,7 @@
 *, *::before, *::after {
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: bold;
+    font-weight: bold;
 }
 
 :root{
@@ -55,7 +55,7 @@ body.wrong {
      background-color: hsl(var(--hue), 100%, 50%);
      border-radius: 5px; 
      padding: 5px 10px;
-     color: black;
+     color: white;
      outline: none; 
  }
 
@@ -65,9 +65,24 @@ body.wrong {
 
  .button.correct {
      --hue: var(--hue-correct);
+     color: black;
  }
 
  
  .button.wrong {
     --hue: var(--hue-wrong);
+    color: black;
+}
+
+.startButton {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+
+.nextButton {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px 20px;
 }
