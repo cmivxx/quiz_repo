@@ -1,7 +1,7 @@
 /*----- constants -----*/
 const startButton = document.getElementById('startButton')
 const questionContentElement = document.getElementById('question-content')  
-
+const shuffledQuestions, currentQuestionIndex
 
 
 /*----- app's state (variables) -----*/
@@ -24,6 +24,8 @@ startButton.addEventListener('click', startGame)
 function startGame() {
     console.log('Started');
     startButton.classList.add('hide')
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    currentQuestionIndex = 0 
     questionContentElement.classList.remove('hide')
     setNextQuestion()
 }
