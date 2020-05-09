@@ -40,5 +40,13 @@ body.wrong {
      background-color: white;
      border-radius: 5px;
      padding: 10px;
-     
+}
+
+ .button-config {
+     display: grid;
+     grid-template-columns: repeat(2, auto);
+     gap: 10px;
+     margin: 20px 0;
  }
+
+ 
