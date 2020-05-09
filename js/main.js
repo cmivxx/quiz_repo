@@ -62,9 +62,25 @@ function showQuestion(question) {
 
 
 
-function selectAnswer() {
-
+function selectAnswer(event) {
+    const selectButton = event.target
+    const correct = selectedButton.dataset.correct
+    setStatusClass(document.body, correct)
+    Array.from(answerButtonElement.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    })
 } 
+
+
+function setStatusClass(element, correct) {
+    clearStatusClass(element) {
+        element.classList.add('correct')
+    } else {
+        element.classList.add('wrong')
+    }
+}
+
+
 
 
 
