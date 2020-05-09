@@ -16,7 +16,10 @@ let shuffledQuestions, currentQuestionIndex
 
 /*----- event listeners -----*/
 startButton.addEventListener('click', startGame)
-
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    setNextQuestion()
+})
 
 
 /*----- functions -----*/
@@ -63,24 +66,33 @@ function showQuestion(question) {
 
 
 function selectAnswer(event) {
-    const selectButton = event.target
+    const selectedButton = event.target
     const correct = selectedButton.dataset.correct
     setStatusClass(document.body, correct)
     Array.from(answerButtonElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
+    if (shuffledQuestions.length > currentQuestionIndex + 1){
+    nextButton.classList.remove('hide')
+    } else {
+        startButton.innerText = "Restart"
+        startButton.classList.remove('hide')
+    }
 } 
 
 
+
 function setStatusClass(element, correct) {
-    clearStatusClass(element) {
-        element.classList.add('correct')
-    } else {
-        element.classList.add('wrong')
+    clearStatusClass(element); 
+     if (correct) { element.classList.add('correct')}
+     else {
+        element.classList.add('wrong')}
     }
+
+function clearStatusClass(element) {
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
 }
-
-
 
 
 
@@ -96,4 +108,18 @@ const questions = [
 
       ]  
     }
+
+    {
+        question: 'Fissures, vents and plugs are all associated with which geological feature?',
+        answers: [
+            {text: 'Earthquakes', correct: false},
+            {text: 'Volcanos', correct: true},
+            {text: 'Maar', correct: false},
+            {text: 'Caldera', correct: false},
+  
+        ]  
+      }
+
+
+
 ]
