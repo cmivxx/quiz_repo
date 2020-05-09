@@ -20,6 +20,16 @@ startButton.addEventListener('click', startGame)
 
 
 /*----- functions -----*/
+function resetState () {
+    nextButton.classList.add('hide')
+    while (answerButtonElement.firstChild) {
+        answerButtonElement.removeChild(answerButtonElement.firstChild)
+    }
+}
+
+
+
+
 function startGame() {
     console.log('Started');
     startButton.classList.add('hide')
@@ -30,6 +40,7 @@ function startGame() {
 }
 
 function setNextQuestion() {
+    resetState()
     showQuestion(shuffledQuestions[currentQuestionIndex])
 
 }
