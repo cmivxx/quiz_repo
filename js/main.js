@@ -22,7 +22,7 @@ startButton.addEventListener('click', startGame)
 
 /*----- functions -----*/
 function startGame() {
-
+    console.log('Started');
 }
 
 function setNextQuestion() {
