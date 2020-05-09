@@ -1,5 +1,5 @@
 /*----- constants -----*/
-
+const startButton = document.getElementById('startButton')
 
 
 
@@ -16,7 +16,7 @@
 
 
 /*----- event listeners -----*/
-
+startButton.addEventListener('click', startGame)
 
 
 
