@@ -86,3 +86,10 @@ body.wrong {
     font-weight: bold;
     padding: 10px 20px;
 }
+
+.config {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
