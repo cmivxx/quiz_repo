@@ -24,14 +24,12 @@ nextButton.addEventListener('click', () => {
 
 /*----- functions -----*/
 function resetState () {
+    clearStatusClass(document.body)
     nextButton.classList.add('hide')
     while (answerButtonElement.firstChild) {
         answerButtonElement.removeChild(answerButtonElement.firstChild)
     }
 }
-
-
-
 
 function startGame() {
     console.log('Started');
@@ -61,8 +59,6 @@ function showQuestion(question) {
         answerButtonElement.appendChild(button)
     })
 }
-
-
 
 
 function selectAnswer(event) {
@@ -107,18 +103,18 @@ const questions = [
           {text: 'Baiji', correct: false},
 
       ]  
-    }
-
+    },
     {
-        question: 'Fissures, vents and plugs are all associated with which geological feature?',
+        question: 'is Sam Tall?',
         answers: [
-            {text: 'Earthquakes', correct: false},
-            {text: 'Volcanos', correct: true},
-            {text: 'Maar', correct: false},
-            {text: 'Caldera', correct: false},
+            {text: 'yes', correct: true},
+            {text: 'no', correct: false},
+            {text: 'pony', correct: false},
+            {text: 'maybeso', correct: false},
   
         ]  
-      }
+      },
+
 
 
 
