@@ -1,6 +1,6 @@
 /*----- constants -----*/
 const startButton = document.getElementById('startButton')
-
+const questionContentElement = document.getElementById('question-content')  
 
 
 
