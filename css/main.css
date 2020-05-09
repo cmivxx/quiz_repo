@@ -63,4 +63,11 @@ body.wrong {
      border-color: black;
  }
 
+ .button.correct {
+     --hue: var(--hue-correct);
+ }
+
  
+ .button.wrong {
+    --hue: var(--hue-wrong);
+}
