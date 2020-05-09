@@ -1,12 +1,11 @@
 /*----- constants -----*/
 const startButton = document.getElementById('startButton')
 const questionContentElement = document.getElementById('question-content')  
-const shuffledQuestions, currentQuestionIndex
-
-
+const questionElement = document.getElementById('question')
+const answerButtonElement = document.getElementById('answerButtons')
 /*----- app's state (variables) -----*/
 
-
+let shuffledQuestions, currentQuestionIndex
 
 
 
@@ -31,8 +30,16 @@ function startGame() {
 }
 
 function setNextQuestion() {
+    showQuestion(shuffledQuestions[currentQuestionIndex])
 
 }
+
+function showQuestion(question) {
+    questionElement.innerText = question.question
+}
+
+
+
 
 function selectAnswer() {
 
@@ -41,9 +48,9 @@ function selectAnswer() {
 
 
 /*----- Question references -----*/
-const question = [
+const questions = [
     {
-      question: 'The only known monotremes in the animal kingdom are the echidna and which other creature?'
+      question: 'The only known monotremes in the animal kingdom are the echidna and which other creature?',
       answers: [
           {text: 'Platypus', correct: true},
           {text: 'Saola', correct: false},
