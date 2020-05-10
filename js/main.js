@@ -6,7 +6,7 @@ const answerButtonElement = document.getElementById('answerButtons')
 /*----- app's state (variables) -----*/
 
 let shuffledQuestions, currentQuestionIndex
-
+var score = 0;
 
 
 /*----- cached element references -----*/
@@ -23,6 +23,14 @@ nextButton.addEventListener('click', () => {
 
 
 /*----- functions -----*/
+function drawScore () {
+    ctx.font = "16x Arial";
+    ctx.fillStyle = "#0095DD";
+    ctx.fillText = ("Score: " +score, 8, 20);
+}
+
+
+
 function resetState () {
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
@@ -101,8 +109,9 @@ const questions = [
           {text: 'Saola', correct: false},
           {text: 'Hirola', correct: false},
           {text: 'Baiji', correct: false},
-
-      ]  
+        
+      ] 
+    
     },
     {
         question: 'is Sam Tall?',
@@ -111,8 +120,9 @@ const questions = [
             {text: 'no', correct: false},
             {text: 'pony', correct: false},
             {text: 'maybeso', correct: false},
-  
+            
         ]  
+    
       },
 
 
