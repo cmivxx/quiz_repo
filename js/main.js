@@ -5,6 +5,7 @@ const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answerButtons')
 const gameMusic = new Audio("../Audio/gamemusic.mp3") 
 const gameScoreElement = document.getElementById('gameScore')
+const startGameContentElement = document.getElementById('startGame-Content')
 /*----- app's state (variables) -----*/
 
 let shuffledQuestions, currentQuestionIndex
@@ -37,13 +38,14 @@ function resetState () {
 }
 
 function startGame() {
-    console.log('Started');
     startButton.classList.add('hide')
+    startGameContentElement.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0 
     questionContentElement.classList.remove('hide')
     gameMusic.volume = .04;
     gameMusic.play()
+    gameMusic.loop;
     setNextQuestion()
 }
 
@@ -71,8 +73,8 @@ function showQuestion(question) {
 function selectAnswer(event) {
     const selectedButton = event.target
     const correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct) 
     if (correct) gameScore++
+    setStatusClass(document.body, correct) 
     console.log(gameScore);
     Array.from(answerButtonElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
@@ -89,8 +91,9 @@ function selectAnswer(event) {
 
 function setStatusClass(element, correct) {
     clearStatusClass(element); 
-     if (correct) { element.classList.add('correct')}
-     else {
+    gameScoreElement.innerText = gameScore; 
+    if (correct) { element.classList.add('correct')}
+      else {
         element.classList.add('wrong')}
     }
 
@@ -98,6 +101,8 @@ function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
+
+
 
 
 
