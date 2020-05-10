@@ -27,17 +27,6 @@ nextButton.addEventListener('click', () => {
 
 
 /*----- functions -----*/
-
-
-
-function drawScore () {
-    ctx.font = "16x Arial";
-    ctx.fillStyle = "#0095DD";
-    ctx.fillText = ("Score: " +score, 8, 20);
-}
-
-
-
 function resetState () {
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
@@ -81,7 +70,10 @@ function showQuestion(question) {
 function selectAnswer(event) {
     const selectedButton = event.target
     const correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct)
+    setStatusClass(document.body, correct) 
+    console.log(correct);
+    if (correct === "correct") gameScore++1
+    console.log(gameScore);
     Array.from(answerButtonElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
