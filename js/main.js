@@ -3,10 +3,12 @@ const startButton = document.getElementById('startButton')
 const questionContentElement = document.getElementById('question-content')  
 const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answerButtons')
+const sounds = gameMusic = ("https://youtu.be/qrT6EFF8p-E?t=10");
 /*----- app's state (variables) -----*/
 
 let shuffledQuestions, currentQuestionIndex
-var score = 0;
+var gameScore = 0;
+
 
 
 /*----- cached element references -----*/
@@ -22,7 +24,12 @@ nextButton.addEventListener('click', () => {
 })
 
 
+
+
 /*----- functions -----*/
+
+
+
 function drawScore () {
     ctx.font = "16x Arial";
     ctx.fillStyle = "#0095DD";
@@ -109,9 +116,8 @@ const questions = [
           {text: 'Saola', correct: false},
           {text: 'Hirola', correct: false},
           {text: 'Baiji', correct: false},
-        
-      ] 
-    
+          
+      ]
     },
     {
         question: 'is Sam Tall?',
