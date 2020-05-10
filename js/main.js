@@ -4,6 +4,7 @@ const questionContentElement = document.getElementById('question-content')
 const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answerButtons')
 const gameMusic = new Audio("../Audio/gamemusic.mp3") 
+const gameScoreElement = document.getElementById('gameScore')
 /*----- app's state (variables) -----*/
 
 let shuffledQuestions, currentQuestionIndex
@@ -71,8 +72,7 @@ function selectAnswer(event) {
     const selectedButton = event.target
     const correct = selectedButton.dataset.correct
     setStatusClass(document.body, correct) 
-    console.log(correct);
-    if (correct === "correct") gameScore++1
+    if (correct) gameScore++
     console.log(gameScore);
     Array.from(answerButtonElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
