@@ -6,6 +6,7 @@ const answerButtonElement = document.getElementById('answerButtons')
 const gameMusic = new Audio("../Audio/gamemusic.mp3") 
 const gameScoreElement = document.getElementById('gameScore')
 const startGameContentElement = document.getElementById('startGame-Content')
+const wows = new Audio("../Audio/wows.mp3")
 /*----- app's state (variables) -----*/
 
 let shuffledQuestions, currentQuestionIndex
@@ -43,7 +44,7 @@ function startGame() {
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0 
     questionContentElement.classList.remove('hide')
-    gameMusic.volume = .04;
+    gameMusic.volume = .01;
     gameMusic.play()
     gameMusic.loop;
     setNextQuestion()
@@ -73,9 +74,10 @@ function showQuestion(question) {
 function selectAnswer(event) {
     const selectedButton = event.target
     const correct = selectedButton.dataset.correct
-    if (correct) gameScore++
+    if (correct) gameScore++;
+    if (correct) {wows.volume =.5;
+    wows.play();}
     setStatusClass(document.body, correct) 
-    console.log(gameScore);
     Array.from(answerButtonElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
