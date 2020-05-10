@@ -3,7 +3,7 @@ const startButton = document.getElementById('startButton')
 const questionContentElement = document.getElementById('question-content')  
 const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answerButtons')
-const sounds = gameMusic = ("https://youtu.be/qrT6EFF8p-E?t=10");
+const gameMusic = new Audio("../Audio/gamemusic.mp3") 
 /*----- app's state (variables) -----*/
 
 let shuffledQuestions, currentQuestionIndex
@@ -52,6 +52,8 @@ function startGame() {
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0 
     questionContentElement.classList.remove('hide')
+    gameMusic.volume = .04;
+    gameMusic.play()
     setNextQuestion()
 }
 
