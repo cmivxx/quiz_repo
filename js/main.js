@@ -130,7 +130,7 @@ const questions = [
       ]
     },
     {
-        question: 'who is The Legend of Zelda protagonist?',
+        question: 'Who is The Legend of Zelda protagonist?',
         img: false,
         answers: [
             {text: 'Zelda', correct: false},
@@ -243,9 +243,9 @@ const questions = [
         question:'What is the name of this small purple dragon with a dragonfly partner?',
         img: '../Assets/Spyro.png',
         answers: [
-            {text: 'Shenron', correct: true},
+            {text: 'Shenron', correct: false},
             {text: 'Smaug', correct: false},
-            {text: 'Spyro', correct: false},
+            {text: 'Spyro', correct: true},
             {text: 'Toothless', correct: false},
         ]  
        },
