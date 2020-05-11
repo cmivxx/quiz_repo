@@ -15,7 +15,7 @@ var gameScore = 0;
 
 
 /*----- cached element references -----*/
-
+const backgroundimg = document.getElementById('background')
 
 
 
@@ -57,7 +57,15 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
+    backgroundimg.src="../Assets/Quizshow.jpg"
     questionElement.innerText = question.question
+    if (question.img){
+        let tempimg=question.img
+        tempimg.src=question.img
+        //tempimg.width= 600;
+       //tempimg.height= 600;
+        backgroundimg.src=tempimg
+    }
     question.answers.forEach(answer => {
         const button = document.createElement('button')
         button.innerText = answer.text
@@ -112,6 +120,7 @@ function clearStatusClass(element) {
 const questions = [
     {
       question: 'What does NES stand for??',
+      img: false,
       answers: [
           {text: 'Nashville Electric Service', correct: false},
           {text: 'National Evaluation Series', correct: false},
@@ -121,7 +130,8 @@ const questions = [
       ]
     },
     {
-        question: 'Legend of Zelda protagonist?',
+        question: 'who is The Legend of Zelda protagonist?',
+        img: false,
         answers: [
             {text: 'Zelda', correct: false},
             {text: 'Link', correct: true},
@@ -133,6 +143,7 @@ const questions = [
       },
       {
         question: 'What popular Nintendo game is also known as "Pocket Monsters"?',
+        img: false,
         answers: [
             {text: 'Digimon', correct: false},
             {text: 'Yokai Watch', correct: false},
@@ -144,12 +155,13 @@ const questions = [
       },
 
       {
-        question: 'Game famous for the line "Fatality"?',
+        question: 'What Game is famous for the line "Fatality"?',
+        img: false,
         answers: [
             {text: 'Street Fighter', correct: false},
             {text: 'Tekken', correct: false},
             {text: 'Mortal Kombat', correct: true},
-            {text: 'Soul Calibur', correct: flase},
+            {text: 'Soul Calibur', correct: false},
             
         ]  
     
@@ -157,6 +169,7 @@ const questions = [
 
       {
         question: 'Game famous for the line "Fatality"?',
+        img: false,
         answers: [
             {text: 'Street Fighter', correct: false},
             {text: 'Tekken', correct: false},
@@ -169,15 +182,38 @@ const questions = [
       
       {
         question: 'Lara Croft is the Protagonist of what popular Playstation game?',
+        img: false,
         answers: [
             {text: 'Silent Hill', correct: false},
             {text: 'Tomb Raider', correct: true},
-            {text: 'Dark Souls', correct: true},
+            {text: 'Dark Souls', correct: false},
+            {text: 'Mario Kart', correct: false},
+            
+        ]  
+    
+      },
+      
+      {
+        question: '?',
+        img: false,
+        answers: [
+            {text: 'Silent Hill', correct: false},
+            {text: 'Tomb Raider', correct: true},
+            {text: 'Dark Souls', correct: false},
             {text: 'Mario Kart', correct: false},
             
         ]  
     
       },
 
-
+      {
+        question: 'Which of these is the name of this fabled pokemon?',
+        img: '../Assets/jigglypuff.png',
+        answers: [
+            {text: 'Digimon', correct: false},
+            {text: 'Yokai Watch', correct: false},
+            {text: 'Monster Hunter Stories', correct: false},
+            {text: 'Pokemon', correct: true},
+        ]  
+       },
 ]
