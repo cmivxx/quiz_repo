@@ -124,15 +124,60 @@ const questions = [
         question: 'Legend of Zelda protagonist?',
         answers: [
             {text: 'Zelda', correct: false},
-            {text: 'Link', correct: true,
+            {text: 'Link', correct: true},
             {text: 'Kirby', correct: false},
             {text: 'Jill Valentine', correct: false},
             
         ]  
     
       },
+      {
+        question: 'What popular Nintendo game is also known as "Pocket Monsters"?',
+        answers: [
+            {text: 'Digimon', correct: false},
+            {text: 'Yokai Watch', correct: false},
+            {text: 'Monster Hunter Stories', correct: false},
+            {text: 'Pokemon', correct: true},
+            
+        ]  
+    
+      },
 
+      {
+        question: 'Game famous for the line "Fatality"?',
+        answers: [
+            {text: 'Street Fighter', correct: false},
+            {text: 'Tekken', correct: false},
+            {text: 'Mortal Kombat', correct: true},
+            {text: 'Soul Calibur', correct: flase},
+            
+        ]  
+    
+      },
 
+      {
+        question: 'Game famous for the line "Fatality"?',
+        answers: [
+            {text: 'Street Fighter', correct: false},
+            {text: 'Tekken', correct: false},
+            {text: 'Mortal Kombat', correct: true},
+            {text: 'Soul Calibur', correct: false},
+            
+        ]  
+    
+      },
+      
+      {
+        question: 'Lara Croft is the Protagonist of what popular Playstation game?',
+        answers: [
+            {text: 'Silent Hill', correct: false},
+            {text: 'Tomb Raider', correct: true},
+            {text: 'Dark Souls', correct: true},
+            {text: 'Mario Kart', correct: false},
+            
+        ]  
+    
+      },
 
 
 ]
