@@ -111,22 +111,22 @@ function clearStatusClass(element) {
 /*----- Question references -----*/
 const questions = [
     {
-      question: 'The only known monotremes in the animal kingdom are the echidna and which other creature?',
+      question: 'What does NES stand for??',
       answers: [
-          {text: 'Platypus', correct: true},
-          {text: 'Saola', correct: false},
-          {text: 'Hirola', correct: false},
-          {text: 'Baiji', correct: false},
+          {text: 'Nashville Electric Service', correct: false},
+          {text: 'National Evaluation Series', correct: false},
+          {text: 'Nuverra Environmental Solutions', correct: false},
+          {text: 'Nintendo Entertainment System', correct: true},
           
       ]
     },
     {
-        question: 'is Sam Tall?',
+        question: 'Legend of Zelda protagonist?',
         answers: [
-            {text: 'yes', correct: true},
-            {text: 'no', correct: false},
-            {text: 'pony', correct: false},
-            {text: 'maybeso', correct: false},
+            {text: 'Zelda', correct: false},
+            {text: 'Link', correct: true,
+            {text: 'Kirby', correct: false},
+            {text: 'Jill Valentine', correct: false},
             
         ]  
     
