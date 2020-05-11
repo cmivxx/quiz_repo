@@ -197,8 +197,8 @@ const questions = [
         question: 'Who is this famous bounty hunter?',
         img: '../Assets/Samus.png',
         answers: [
-            {text: 'Zero Suit Samus', correct: false},
-            {text: 'Daisy', correct: true},
+            {text: 'Zero Suit Samus', correct: true},
+            {text: 'Daisy', correct: false},
             {text: 'Chung-Li', correct: false},
             {text: 'Morganna', correct: false},
             
@@ -216,4 +216,28 @@ const questions = [
             {text: 'Jigglypuff', correct: true},
         ]  
        },
+       
+      {
+        question: 'Blinky, Pinky, Inky, & _____?',
+        img: false,
+        answers: [
+            {text: 'Minkey', correct: false},
+            {text: 'Chuck', correct: false},
+            {text: 'Cylde', correct: true},
+            {text: 'Eddy', correct: false},
+        ]  
+       },
+
+       {
+        question:'What was Marios orginal name?',
+        img: false,
+        answers: [
+            {text: 'Jumpman', correct: true},
+            {text: 'Plumberdude', correct: false},
+            {text: 'Wreck-It-Ralph', correct: false},
+            {text: 'RocketMan', correct: false},
+        ]  
+       },
+
+
 ]
