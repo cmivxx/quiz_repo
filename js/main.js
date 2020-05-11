@@ -262,4 +262,53 @@ const questions = [
         ]  
        },
 
+       {
+        question:'Famous Skateboarder that inspired over 17 different Skateboard that cover many different gaming platforms?',
+        img: false,
+        answers: [
+            {text: 'Tony Hawk', correct: true},
+            {text: 'Rodney Mullen', correct: false},
+            {text: 'Bam Margera', correct: false},
+            {text: 'Oksana Baiul', correct: false},
+        ]  
+       },
+
+
+       {
+        question:'This Arwing is from what game series??',
+        img: '../Assets/Arwing.png',
+        answers: [
+            {text: 'Star Wars', correct:false},
+            {text: 'Star Fox', correct: true},
+            {text: 'Battlestar Galactica', correct: false},
+            {text: 'Firefly', correct: false},
+        ]  
+       },
+
+
+       
+       {
+        question:'Segas first handheld game console released worldwide?',
+        img: false,
+        answers: [
+            {text: 'Switch', correct:false},
+            {text: 'PS Pro', correct: false},
+            {text: 'Game Gear', correct: true},
+            {text: 'Sega Genesis Arcade Ultimate Portable', correct: false},
+        ]  
+       },
+
+
+       {
+        question:'Who is the doctor that created Mega Man?',
+        img: false,
+        answers: [
+            {text: 'Dr. Robotnik', correct:false},
+            {text: 'Dr. Eggman', correct: false},
+            {text: 'Dr. Light', correct: true},
+            {text: 'Dr. Gero', correct: false},
+        ]  
+       },
+
+
 ]
