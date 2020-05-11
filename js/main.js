@@ -168,13 +168,13 @@ const questions = [
       },
 
       {
-        question: 'Game famous for the line "Fatality"?',
+        question: 'Konami game where you play as Simon Belmont?',
         img: false,
         answers: [
-            {text: 'Street Fighter', correct: false},
-            {text: 'Tekken', correct: false},
-            {text: 'Mortal Kombat', correct: true},
-            {text: 'Soul Calibur', correct: false},
+            {text: 'Castlevania', correct: true},
+            {text: 'Contra', correct: false},
+            {text: 'Journey to the Center of the Earth', correct: false},
+            {text: 'Dragon Ball Z', correct: false},
             
         ]  
     
@@ -194,26 +194,26 @@ const questions = [
       },
       
       {
-        question: '?',
-        img: false,
+        question: 'Who is this famous bounty hunter?',
+        img: '../Assets/Samus.png',
         answers: [
-            {text: 'Silent Hill', correct: false},
-            {text: 'Tomb Raider', correct: true},
-            {text: 'Dark Souls', correct: false},
-            {text: 'Mario Kart', correct: false},
+            {text: 'Zero Suit Samus', correct: false},
+            {text: 'Daisy', correct: true},
+            {text: 'Chung-Li', correct: false},
+            {text: 'Morganna', correct: false},
             
         ]  
     
       },
 
       {
-        question: 'Which of these is the name of this fabled pokemon?',
+        question: 'Which of these is the name of this pokemon?',
         img: '../Assets/jigglypuff.png',
         answers: [
-            {text: 'Digimon', correct: false},
-            {text: 'Yokai Watch', correct: false},
-            {text: 'Monster Hunter Stories', correct: false},
-            {text: 'Pokemon', correct: true},
+            {text: 'Gegar', correct: false},
+            {text: 'Charizard', correct: false},
+            {text: 'Ludicolo', correct: false},
+            {text: 'Jigglypuff', correct: true},
         ]  
        },
 ]
