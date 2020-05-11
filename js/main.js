@@ -259,7 +259,9 @@ const questions = [
             {text: 'Jed Clampett', correct: false},
             {text: 'Bruce Wayne', correct: false},
             {text: 'Scoorge McDuck', correct: true},
-        ]  
+        ]
+        
+        
        },
 
        {
@@ -311,4 +313,36 @@ const questions = [
        },
 
 
+       {
+        question:'Atari 2600 has a released a game that is considered one of the worst game ever?',
+        img: false,
+        answers: [
+            {text: 'Pong' , correct:false},
+            {text: 'E.T. the Extra-Terrestrial', correct: true},
+            {text: 'Space Invaders', correct: false},
+            {text: 'Asteroids', correct: false},
+        ]  
+       },
+
+       {
+        question:'The damsel in distress from the original Donkey Kong?',
+        img: false,
+        answers: [
+            {text: 'Pauline' , correct:true},
+            {text: 'Peach', correct: false},
+            {text: 'Daisy', correct: false},
+            {text: 'Amy Rose', correct: false},
+        ]  
+       },
+
+       {
+        question:'What type of animal is Sonics companion Knuckles?',
+        img: "../Assets/Knuckles.png",
+        answers: [
+            {text: 'Echidna' , correct:true},
+            {text: 'Headgehog', correct: false},
+            {text: 'Possum', correct: false},
+            {text: 'Red Fox', correct: false},
+        ]  
+       },
 ]
