@@ -239,5 +239,27 @@ const questions = [
         ]  
        },
 
+       {
+        question:'What is the name of this small purple dragon with a dragonfly partner?',
+        img: '../Assets/Spyro.png',
+        answers: [
+            {text: 'Shenron', correct: true},
+            {text: 'Smaug', correct: false},
+            {text: 'Spyro', correct: false},
+            {text: 'Toothless', correct: false},
+        ]  
+       },
+
+       
+       {
+        question:'Who is the richest fictional character?',
+        img: false,
+        answers: [
+            {text: 'Tywin Lannister', correct: false},
+            {text: 'Jed Clampett', correct: false},
+            {text: 'Bruce Wayne', correct: false},
+            {text: 'Scoorge McDuck', correct: true},
+        ]  
+       },
 
 ]
