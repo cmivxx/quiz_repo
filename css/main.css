@@ -8,7 +8,12 @@
     --hue-correct: 145;
   }
   
- 
+ img {
+   height: 300px;
+   width: 500px;
+   display: grid;
+   margin: 15px;
+ }
 
 
 

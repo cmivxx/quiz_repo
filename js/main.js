@@ -3,7 +3,7 @@ const startButton = document.getElementById('startButton')
 const questionContentElement = document.getElementById('question-content')  
 const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answerButtons')
-const gameMusic = new Audio("../Audio/gamemusic.mp3") 
+const gameMusic = new Audio("../Audio/Undertaletrack2.mp3") 
 const gameScoreElement = document.getElementById('gameScore')
 const startGameContentElement = document.getElementById('startGame-Content')
 const wows = new Audio("../Audio/wows.mp3")
@@ -44,7 +44,7 @@ function startGame() {
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0 
     questionContentElement.classList.remove('hide')
-    gameMusic.volume = .01;
+    gameMusic.volume = .2;
     gameMusic.play()
     gameMusic.loop;
     setNextQuestion()
