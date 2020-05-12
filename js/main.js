@@ -3,6 +3,7 @@ const startButton = document.getElementById('startButton')
 const questionContentElement = document.getElementById('question-content')  
 const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answerButtons')
+const restartButtonElement = document.getElementById('restartButton')
 const gameMusic = new Audio("../Audio/Undertaletrack2.mp3") 
 const gameScoreElement = document.getElementById('gameScore')
 const startGameContentElement = document.getElementById('startGame-Content')
@@ -10,7 +11,7 @@ const wows = new Audio("../Audio/wows.mp3")
 /*----- app's state (variables) -----*/
 
 let shuffledQuestions, currentQuestionIndex
-var gameScore = 0;
+let gameScore = 0;
 
 
 
@@ -25,14 +26,23 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 })
-
+restartButtonElement.addEventListener('click', restart)
 
 
 
 /*----- functions -----*/
+function restart() {
+    gameScore = 0;
+    startGame()
+}
+
+
+
+
 function resetState () {
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
+    
     while (answerButtonElement.firstChild) {
         answerButtonElement.removeChild(answerButtonElement.firstChild)
     }
@@ -41,7 +51,7 @@ function resetState () {
 function startGame() {
     startButton.classList.add('hide')
     startGameContentElement.classList.add('hide')
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    shuffledQuestions = questions.sort(() => Math.ceil() > 21)
     currentQuestionIndex = 0 
     questionContentElement.classList.remove('hide')
     gameMusic.volume = .2;
@@ -62,8 +72,6 @@ function showQuestion(question) {
     if (question.img){
         let tempimg=question.img
         tempimg.src=question.img
-        //tempimg.width= 600;
-       //tempimg.height= 600;
         backgroundimg.src=tempimg
     }
     question.answers.forEach(answer => {
@@ -92,8 +100,7 @@ function selectAnswer(event) {
     if (shuffledQuestions.length > currentQuestionIndex + 1){
     nextButton.classList.remove('hide')
     } else {
-        startButton.innerText = "Restart"
-        startButton.classList.remove('hide')
+       restartButtonElement.classList.remove('hide');
     }
 } 
 
