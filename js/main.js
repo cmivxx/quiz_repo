@@ -26,18 +26,11 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 })
-restartButtonElement.addEventListener('click', restart)
+restartButtonElement.addEventListener('click', startGame)
 
 
 
-/*----- functions -----*/
-function restart() {
-    gameScore = 0;
-    startGame()
-}
-
-
-
+/*----- functions -----*/   
 
 function resetState () {
     clearStatusClass(document.body)
@@ -51,8 +44,10 @@ function resetState () {
 function startGame() {
     startButton.classList.add('hide')
     startGameContentElement.classList.add('hide')
-    shuffledQuestions = questions.sort(() => Math.ceil() > 21)
+    shuffledQuestions = questions.sort(() => Math.random(questions.length))
     currentQuestionIndex = 0 
+    gameScore = 0;
+    gameScoreElement.innerText = gameScore; 
     questionContentElement.classList.remove('hide')
     gameMusic.volume = .2;
     gameMusic.play()
@@ -102,6 +97,7 @@ function selectAnswer(event) {
     } else {
        restartButtonElement.classList.remove('hide');
     }
+    
 } 
 
 
@@ -146,8 +142,8 @@ const questions = [
             {text: 'Jill Valentine', correct: false},
             
         ]  
+    },
     
-      },
       {
         question: 'What popular Nintendo game is also known as "Pocket Monsters"?',
         img: false,
