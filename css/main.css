@@ -16,7 +16,11 @@
    padding-left: 50px;
  }
 
-
+#background {
+  position: absolute;
+  margin-bottom: 1000px;
+  
+}
 
 
   body {
@@ -116,4 +120,12 @@ p1 {
 
 #image {
  margin-bottom: 30px;
+}
+
+.fadeout {
+  height: 50px;
+  width: 75px;
+  position: relative;
+  top: 10vh;
+  left: 10vw;
 }
